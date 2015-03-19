@@ -1,13 +1,11 @@
 (function () {
   'use strict';
 
-
   var app = require('express')();
   var cors = require('cors');
   var bodyParser = require('body-parser');
   var http = require('http')
     .Server(app);
-  var API_TOKEN = 'HNRO7R4NKRZrgbVf4JvhoeLY';
 
   app.use(cors());
 
@@ -25,9 +23,11 @@
     console.log(req.body);
     console.log('Received a hodor message!');
 
+    var punctuations = ['!', '!!', '?!', ' . . .'];
+
     var userName = req.body.user_name;
     var botPayload = {
-      text: 'Hello, ' + userName + '!'
+      text: 'Hodor' + punctuations[Math.floor(Math.random() * punctuations.length)]
     };
 
     // avoid infinite loop
@@ -38,8 +38,6 @@
       return res.status(200)
         .end();
     }
-
-    res.send('Thanks!');
   });
 
   http.listen(process.env.PORT, function () {
