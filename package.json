@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Latros/Slack-Hodor-Bot/issues"
   },
-  "homepage": "https://github.com/Latros/Slack-Hodor-Bot"
+  "homepage": "https://github.com/Latros/Slack-Hodor-Bot",
+  "dependencies": {
+    "cors": "^2.5.3",
+    "express": "^4.12.3",
+    "http": "0.0.0"
+  }
 }
