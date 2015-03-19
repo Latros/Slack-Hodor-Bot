@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Latros/Slack-Hodor-Bot",
   "dependencies": {
+    "body-parser": "^1.12.2",
     "cors": "^2.5.3",
     "express": "^4.12.3",
     "http": "0.0.0"
